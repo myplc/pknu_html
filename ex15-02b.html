@@ -93,7 +93,7 @@
       const arr2 = ((arr[2] / epoch) * 100).toFixed(1);
       const arr3 = ((arr[3] / epoch) * 100).toFixed(1);
 
-      list += `    <h1>주사위확률</h1><table>`;
+      list += `    <h1>아이템 드롭확률</h1><table>`;
       list += `    <tr>`;
       list += `      <th>아이템</th>`;
       list += `      <th>기본확률</th>`;
@@ -134,12 +134,12 @@
       ).toFixed(1)}%</td>`;
       list += `</tr>`;
       list += `</table> <div class="btn"><button onclick="location.reload(true)">새로고침</button>
-      <button onclick="alert('주사위 확률조회입니다.')">팝업</button></div>`;
+      <button onclick="alert('아이템 드롭 확률조회입니다.')">팝업</button></div>`;
       list += `<div id="box">`;
-      list += `<div style="width: ${arr0}%"><span>${arr0}%</span></div>`;
-      list += `<div style="width: ${arr1}%"><span>${arr1}%</span></div>`;
-      list += `<div style="width: ${arr2}%"><span>${arr2}%</span></div>`;
-      list += `<div style="width:${arr3}%"><span>${arr3}%</span></div>`;
+      list += `<div style="width: calc(${arr0}% * 1.5)"><span>${arr0}%</span></div>`;
+      list += `<div style="width: calc(${arr1}% * 1.5)"><span>${arr1}%</span></div>`;
+      list += `<div style="width: calc(${arr2}% * 1.5)"><span>${arr2}%</span></div>`;
+      list += `<div style="width: calc(${arr3}% * 1.5)"><span>${arr3}%</span></div>`;
       list += `</div>`;
 
       document.body.innerHTML = list;
